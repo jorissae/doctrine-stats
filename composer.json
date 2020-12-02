@@ -1,5 +1,5 @@
 {
-    "name": "steevanb/doctrine-stats",
+    "name": "jorissae/doctrine-stats",
     "license": "MIT",
     "description": "Count managed entities and lazy loaded entities, hydration time, etc",
     "minimum-stability": "dev",
@@ -21,7 +21,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/steevanb/doctrine-stats.git"
+            "url": "https://github.com/jorissae/doctrine-stats.git"
         }
     ]
 }
