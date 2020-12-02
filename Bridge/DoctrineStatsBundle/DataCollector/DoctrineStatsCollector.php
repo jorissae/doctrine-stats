@@ -9,6 +9,7 @@ use Symfony\Bridge\Doctrine\RegistryInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\DataCollector\DataCollector;
+use Doctrine\Persistence\ManagerRegistry;
 
 class DoctrineStatsCollector extends DataCollector implements DoctrineCollectorInterface
 {
@@ -39,13 +40,13 @@ class DoctrineStatsCollector extends DataCollector implements DoctrineCollectorI
     /** @var array */
     protected $hydratedEntities = [];
 
-    /** @var RegistryInterface */
+    /** @var ManagerRegistry */
     protected $doctrine;
 
     /**
      * @param SqlLogger $sqlLogger
      */
-    public function __construct(SqlLogger $sqlLogger, RegistryInterface $doctrine)
+    public function __construct(SqlLogger $sqlLogger, ManagerRegistry $doctrine)
     {
         $this->sqlLogger = $sqlLogger;
         $this->doctrine = $doctrine;
