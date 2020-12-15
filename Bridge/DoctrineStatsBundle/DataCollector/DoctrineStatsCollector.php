@@ -5,11 +5,10 @@ namespace steevanb\DoctrineStats\Bridge\DoctrineStatsBundle\DataCollector;
 use Doctrine\ORM\EntityManagerInterface;
 use steevanb\DoctrineStats\Bridge\DoctrineCollectorInterface;
 use steevanb\DoctrineStats\Doctrine\DBAL\Logger\SqlLogger;
-use Symfony\Bridge\Doctrine\RegistryInterface;
+use Symfony\Bridge\Doctrine\ManagerRegistry;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\DataCollector\DataCollector;
-use Doctrine\Persistence\ManagerRegistry;
 
 class DoctrineStatsCollector extends DataCollector implements DoctrineCollectorInterface
 {
